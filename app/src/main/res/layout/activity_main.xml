@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/heightText"
+        android:layout_width="219dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="279dp"
+        android:ems="10"
+        android:hint="Enter your height"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/ayloImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/weightText"
+        android:layout_width="221dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="Enter your weight"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintStart_toStartOf="@+id/heightText"
+        app:layout_constraintTop_toBottomOf="@+id/heightText" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="204dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="16dp"
+        android:hint="You are .."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightText" />
+
+    <ImageView
+        android:id="@+id/ayloImage"
+        android:layout_width="168dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightText"
+        app:srcCompat="@drawable/resource_true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="135dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ayloImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calculate"
+            android:text="Calculate" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
